@@ -1,0 +1,67 @@
+body
+  font-family: Arial
+  margin: 0
+  padding: 0
+
+
+
+.choice-point-wrapper
+  background: black no-repeat center
+  background-size: contain
+  height: 100vh
+  width: 100%
+
+  h2
+    color: #FFFFFF
+    margin: auto
+    text-align: center
+
+  button
+    background: none
+    border: 0
+    border-radius: 4px
+    color: #FFF
+    font-size: 18px
+    font-weight: bold
+    margin: 0 15vw 20px 15vw
+    padding: 8px
+    position: relative
+
+    &.selected::after
+      content: ''
+      background: -moz-linear-gradient(left, #000000 0%,  #EEEEEE 50%, #000000 100%) /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #000000 0%, #EEEEEE 50%,#000000 100%) /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, #000000 0%, #EEEEEE 50%,#000000 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      border-radius: 100%
+      bottom: -10px
+      height: 3px
+      left: 0
+      position: absolute
+      right: 0
+
+  .choice-wrapper
+    background: black
+    bottom: 0
+    display: flex
+    flex-direction: column
+    height: 200px
+    position: absolute
+    width: 100%
+
+    .choice-timer
+      animation: choice-timer-anim 10s linear
+      background: #FFFFFF
+      height: 3px
+      width: 100%
+
+      @keyframes choice-timer-anim
+        from
+          width: 0
+        to
+          width: 100%
+
+    .button-wrapper
+      display: flex
+      flex-direction: row
+      justify-content: center
+      margin-bottom: 20px

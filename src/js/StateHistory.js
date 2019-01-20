@@ -74,9 +74,12 @@ export default class StateHistory extends Record({
   evaluateConditions(conditions) {
     if (conditions && conditions.length > 0) {
       return conditions.map(condition => {
-        if (condition[0] === 'persistentState') {
+        const operator = condition[0];
+        if (operator === 'persistentState') {
           return this[condition[1]];
-        } else if (['and', 'or', 'not'].includes(condition[0])) {
+        } else if (operator === 'eql') {
+          return this[condition[1][1]] === condition[2];
+        } if (['and', 'or', 'not'].includes(operator)) {
           return this.evaluatePrecondition(condition)
         }
       });
