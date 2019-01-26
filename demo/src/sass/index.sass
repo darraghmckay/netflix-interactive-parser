@@ -27,6 +27,12 @@ body
     padding: 8px
     position: relative
 
+    .image-button
+      background-size: contain !important
+      min-height: 50px
+      max-height: 75px
+      width: 200px
+
     &.selected::after
       content: ''
       background: -moz-linear-gradient(left, #000000 0%,  #EEEEEE 50%, #000000 100%) /* FF3.6-15 */
@@ -49,10 +55,10 @@ body
     width: 100%
 
     .choice-timer
-      animation: choice-timer-anim 10s linear
       background: #FFFFFF
       height: 3px
-      width: 100%
+      width: 0
+      transition: width 1s linear
 
       @keyframes choice-timer-anim
         from
@@ -65,3 +71,15 @@ body
       flex-direction: row
       justify-content: center
       margin-bottom: 20px
+
+    .code-input-wrapper
+      margin: 0 auto 50px auto
+
+      input
+        border: 0
+        border-radius: 10px
+        font-size: 20px
+        margin: 0 20px
+        padding: 10px
+        text-align: center
+        width: 20px

@@ -1,0 +1,28 @@
+{
+  "name": "netflix-interactive-parser-demo",
+  "version": "0.0.1",
+  "description": "Netflix interactive content parser demo",
+  "main": "index.js",
+  "repository": "git@github.com:darraghmckay/netflix-interactive-parser.git",
+  "author": "Darragh <darraghmckay@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "pug": "^2.0.3"
+  },
+  "dependencies": {
+    "netflix-interactive-parser": "file:../",
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.5.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "scripts": {
+    "build": "parcel build src/index.pug --public-url https://darraghmckay.github.io/netflix-interactive-parser/",
+    "start": "parcel src/index.pug"
+  }
+}
