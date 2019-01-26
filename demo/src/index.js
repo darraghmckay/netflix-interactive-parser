@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import NetflixInteractiveParser from 'netflix-interactive-parser';
+import bandersnatchImage from './imgs/bandersnatch.jpg';
 import bandersnatchData from './data/bandersnatch';
 import bandersnatchSegmentMap from './data/segmentMap';
 
@@ -77,7 +78,6 @@ class App extends Component {
     this.setState({
       input,
     }, () => {
-      debugger;
       choices.forEach(choice => {
         if (choice.code) {
           const isCorrect = choice.code.split('').every((char, index) => (
@@ -136,10 +136,14 @@ class App extends Component {
   }
 
   render() {
-    const { choices, choicePoint, layoutType, timer } = this.state;
+    const { choices, choicePoint, timer } = this.state;
 
     if (!choices) {
-      return null;
+      return (
+        <div className="end-screen">
+          <img src={bandersnatchImage} />
+        </div>
+      );
     }
 
     return choicePoint && (
