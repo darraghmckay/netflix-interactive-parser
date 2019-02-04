@@ -99,7 +99,7 @@ Where choice looks like:
 
 
 ## Known Issues
-[] There are situations where no choice/segment is found even though it's not certainly the end of the path
-[] Returning the choices for different layouts, such as the code input in bandersnatch doesn't seem to work
+- [ ] There are situations where no choice/segment is found even though it's not certainly the end of the path
+- [ ] Returning the choices for different layouts, such as the code input in bandersnatch doesn't seem to work
 
 This was only tested against the bandersnatch data but in theory should work for all of Netflix's interactive content
