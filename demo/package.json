@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "netflix-interactive-parser": "file:../",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "parcel-bundler": "^1.5.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
